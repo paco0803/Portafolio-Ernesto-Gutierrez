@@ -23,9 +23,9 @@
       <!-- CTA Botón CV -->
       <div class="flex items-center space-x-4">
         <a 
-          href="/CV_Ernesto_Gutierrez.pdf"
+          :href="`${import.meta.env.BASE_URL}CV_Ernesto_Gutierrez.pdf`"
           download="CV_Ernesto_Gutierrez.pdf"
-          class="inline-flex items-center space-x-2 px-4 py-2 text-xs font-mono font-medium rounded-lg bg-emerald-500/10 text-emerald-accent border border-emerald-500/40 hover:bg-emerald-500/20 hover:border-emerald-500 transition-all shadow-[0_0_15px_rgba(16,185,129,0.15)]"
+          class="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-accent border border-emerald-500/30 hover:bg-emerald-500 hover:text-black transition-all font-mono text-sm"
         >
           <Download class="w-4 h-4" />
           <span>Descargar CV</span>

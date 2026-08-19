@@ -105,7 +105,7 @@ const projects = [
       'Aprovisionamiento de infraestructura como código (IaC) en Microsoft Azure (VNets, Firewalls, VMs Linux) mediante Terraform.'
     ],
     technologies: ['Terraform', 'Azure', 'Kubernetes', 'Helm', 'Docker', 'GitHub Actions', 'CI/CD'],
-    image: '/migration.png',
+    image: import.meta.env.BASE_URL + 'migration.png',
     githubUrl: 'https://github.com/paco0803/proyecto-universitario-end-to-end'
   },
   {
@@ -119,7 +119,7 @@ const projects = [
       'Implementación de observabilidad y métricas de rendimiento.'
     ],
     technologies: ['Python', 'Docker', 'Machine Learning', 'API', 'Monitoreo'],
-    image: '/monitoreo.jpg',
+    image: import.meta.env.BASE_URL + 'monitoreo.jpg',
     githubUrl: 'https://github.com/paco0803/Despliegue-y-Monitoreo-de-un-Modelo-de-IA'
   },
   {

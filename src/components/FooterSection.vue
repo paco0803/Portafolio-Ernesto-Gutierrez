@@ -48,20 +48,22 @@
           >
             <Mail class="w-5 h-5 group-hover:scale-110 transition-transform" />
           </a>
-
-          <a 
-            href="/CV_Ernesto_Gutierrez.pdf"
-            download="CV_Ernesto_Gutierrez.pdf"
-            class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-emerald-500/10 text-emerald-accent border border-emerald-500/40 hover:bg-emerald-500/20 text-xs font-mono font-semibold transition-all"
-          >
-            <Download class="w-4 h-4" />
-            <span>CV PDF</span>
-          </a>
         </div>
       </div>
 
-      <div class="mt-12 pt-8 border-t border-dark-border/40 text-center text-xs font-mono text-gray-500">
-        <p>© 2026 Portafolio Profesional Ernesto Gutierrez. Diseñado con Vue 3 & Tailwind CSS.</p>
+      <div class="mt-12 pt-8 border-t border-dark-border/60 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-500 font-mono">
+          © 2026 Ernesto Gutierrez. Todos los derechos reservados.
+        </p>
+
+        <a 
+          :href="`${import.meta.env.BASE_URL}CV_Ernesto_Gutierrez.pdf`"
+          download="CV_Ernesto_Gutierrez.pdf"
+          class="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-accent border border-emerald-500/30 hover:bg-emerald-500 hover:text-black transition-all font-mono text-sm"
+        >
+          <Download class="w-4 h-4" />
+          <span>Descargar CV Completo</span>
+        </a>
       </div>
     </div>
   </footer>

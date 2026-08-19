@@ -30,7 +30,7 @@
           <!-- Botones CTA -->
           <div class="flex flex-wrap items-center gap-4 mb-12">
             <a 
-              href="/CV_Ernesto_Gutierrez.pdf"
+              :href="`${import.meta.env.BASE_URL}CV_Ernesto_Gutierrez.pdf`"
               download="CV_Ernesto_Gutierrez.pdf"
               class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-emerald-500 text-black font-semibold hover:bg-emerald-400 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)]"
             >
@@ -62,7 +62,7 @@
         <!-- Foto de Perfil (Rectángulo redondeado a la derecha) -->
         <div class="flex-1 w-full flex justify-center lg:justify-end">
           <div class="relative w-full max-w-sm lg:max-w-md aspect-[3/4] rounded-3xl overflow-hidden border-2 border-dark-border shadow-[0_0_40px_rgba(16,185,129,0.15)]">
-            <img src="/profile.jpg" alt="Ernesto Gutierrez" class="w-full h-full object-cover object-top" />
+            <img :src="`${import.meta.env.BASE_URL}profile.jpg`" alt="Ernesto Gutierrez" class="w-full h-full object-cover object-top" />
           </div>
         </div>
 
