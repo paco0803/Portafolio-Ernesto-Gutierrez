@@ -57,7 +57,7 @@
         </p>
 
         <a 
-          :href="`${import.meta.env.BASE_URL}CV_Ernesto_Gutierrez.pdf`"
+          :href="`${baseUrl}CV_Ernesto_Gutierrez.pdf`"
           download="CV_Ernesto_Gutierrez.pdf"
           class="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-accent border border-emerald-500/30 hover:bg-emerald-500 hover:text-black transition-all font-mono text-sm"
         >
@@ -70,5 +70,7 @@
 </template>
 
 <script setup>
-import { Linkedin, Github, Mail, Download } from 'lucide-vue-next'
+import { Github, Linkedin, Mail, Download } from 'lucide-vue-next'
+
+const baseUrl = import.meta.env.BASE_URL
 </script>
