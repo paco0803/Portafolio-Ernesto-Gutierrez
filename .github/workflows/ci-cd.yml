@@ -1,0 +1,51 @@
+name: CI/CD Pipeline - DevOps & MLOps Portfolio
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-lint:
+    name: Lint & Build Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Código Fuente
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js (v20)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar Dependencias
+        run: npm ci
+
+      - name: Compilar Proyecto Estático (Vite Build)
+        run: npm run build
+
+      - name: Subir Artifacts de Compilación
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-site
+          path: dist/
+
+  deploy:
+    name: Despliegue Automático a GitHub Pages
+    needs: build-and-lint
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Desplegar a GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: dist-site
